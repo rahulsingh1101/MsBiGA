@@ -8,7 +8,7 @@
 import SwiftUICore
 import SwiftUI
 
-struct SearchSection: View {
+struct SchemesSearchSection: View {
     @Binding var searchText: String
     
     var body: some View {

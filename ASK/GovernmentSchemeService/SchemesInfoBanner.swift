@@ -7,7 +7,7 @@
 
 import SwiftUICore
 
-struct InfoBanner: View {
+struct SchemesInfoBanner: View {
     var body: some View {
         HStack(spacing: 12) {
             Text("💡")

@@ -8,7 +8,7 @@
 import SwiftUICore
 import SwiftUI
 
-struct FilterChipsSection: View {
+struct SchemesFilterChipsSection: View {
     @Binding var selectedFilter: String
     let filters: [String]
     
@@ -16,7 +16,7 @@ struct FilterChipsSection: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 ForEach(filters, id: \.self) { filter in
-                    FilterChip(
+                    SchemesFilterChip(
                         title: filter,
                         isSelected: selectedFilter == filter
                     ) {

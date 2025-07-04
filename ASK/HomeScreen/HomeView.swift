@@ -34,6 +34,7 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.bottom, 20)
+                .padding(.top, 16)
             }
         }
         .background(Color(UIColor.systemGroupedBackground))

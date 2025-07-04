@@ -8,7 +8,7 @@
 import SwiftUICore
 import SwiftUI
 
-struct BottomActionButtons: View {
+struct SchemesBottomActionButtons: View {
     var body: some View {
         HStack(spacing: 12) {
             Button(action: {

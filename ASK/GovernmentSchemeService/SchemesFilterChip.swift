@@ -8,7 +8,7 @@
 import SwiftUICore
 import SwiftUI
 
-struct FilterChip: View {
+struct SchemesFilterChip: View {
     let title: String
     let isSelected: Bool
     let action: () -> Void

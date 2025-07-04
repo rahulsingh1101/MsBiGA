@@ -16,42 +16,41 @@ struct GovernmentSchemesView: View {
     let filters = ["सभी योजनाएं", "महिला", "किसान", "युवा", "वरिष्ठ नागरिक", "SC/ST", "शिक्षा"]
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color(UIColor.systemGroupedBackground)
-                    .ignoresSafeArea()
+        ZStack {
+            Color(UIColor.systemGroupedBackground)
+                .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                // Custom Header
+                GovernmentSchemesHeaderView(presentationMode: presentationMode)
                 
-                VStack(spacing: 0) {
-                    // Custom Header
-                    GovernmentSchemesHeaderView(presentationMode: presentationMode)
-                    
-                    // Content
-                    ScrollView {
-                        LazyVStack(spacing: 16) {
-                            // Search Section
-                            SearchSection(searchText: $searchText)
-                            
-                            // Filter Chips
-                            FilterChipsSection(selectedFilter: $selectedFilter, filters: filters)
-                            
-                            // Info Banner
-                            InfoBanner()
-                            
-                            // Schemes Section
-                            SchemesSection()
-                        }
-                        .padding(.top, 16)
-                        .padding(.bottom, 100) // Space for bottom buttons
+                // Content
+                ScrollView {
+                    LazyVStack(spacing: 16) {
+                        // Search Section
+                        SchemesSearchSection(searchText: $searchText)
+                        
+                        // Filter Chips
+                        SchemesFilterChipsSection(selectedFilter: $selectedFilter, filters: filters)
+                        
+                        // Info Banner
+                        SchemesInfoBanner()
+                        
+                        // Schemes Section
+                        SchemesSectionContent()
                     }
+                    .padding(.top, 16)
+                    .padding(.bottom, 100)
                 }
-                
-                // Bottom Action Buttons
-                VStack {
-                    Spacer()
-                    BottomActionButtons()
-                }
+            }
+            
+            // Bottom Action Buttons
+            VStack {
+                Spacer()
+                SchemesBottomActionButtons()
             }
         }
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
