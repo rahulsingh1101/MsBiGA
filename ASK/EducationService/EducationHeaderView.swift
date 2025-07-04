@@ -16,9 +16,15 @@ struct EducationHeaderView: View {
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
-                Image(systemName: "chevron.left")
-                    .font(.system(size: 24, weight: .medium))
-                    .foregroundColor(.white)
+                ZStack {
+                    Circle()
+                        .fill(Color.white.opacity(0.2))
+                        .frame(width: 40, height: 40)
+                    
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 20, weight: .medium))
+                        .foregroundColor(.white)
+                }
             }
             
             VStack(alignment: .leading, spacing: 2) {
