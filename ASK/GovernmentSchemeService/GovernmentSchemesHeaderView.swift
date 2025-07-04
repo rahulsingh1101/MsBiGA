@@ -8,12 +8,11 @@
 import SwiftUICore
 import SwiftUI
 
-struct GovernmentSchemeHeaderView: View {
+struct GovernmentSchemesHeaderView: View {
     let presentationMode: Binding<PresentationMode>
     
     var body: some View {
         HStack(spacing: 16) {
-            // Back Button
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
@@ -28,7 +27,6 @@ struct GovernmentSchemeHeaderView: View {
                 }
             }
             
-            // Header Content
             VStack(alignment: .leading, spacing: 2) {
                 Text("सरकारी योजनाएं")
                     .font(.system(size: 20, weight: .medium))
@@ -41,20 +39,8 @@ struct GovernmentSchemeHeaderView: View {
             
             Spacer()
             
-            // Search Button
-            Button(action: {
-                // Handle search action
-            }) {
-                ZStack {
-                    Circle()
-                        .fill(Color.white.opacity(0.2))
-                        .frame(width: 40, height: 40)
-                    
-                    Image(systemName: "magnifyingglass")
-                        .font(.system(size: 20))
-                        .foregroundColor(.white)
-                }
-            }
+            Text("🏛️")
+                .font(.system(size: 24))
         }
         .padding(16)
         .background(Color(red: 0.0, green: 0.475, blue: 0.420))

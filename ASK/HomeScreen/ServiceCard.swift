@@ -61,9 +61,17 @@ struct ServiceCard: View {
     private var destinationView: some View {
         switch index {
         case 0: // स्वास्थ्य सहायता
-            GovernmentSchemesView()
+            HealthServicesView()
+        case 1: // कानूनी सहायता
+            LegalServicesView()
+        case 2: // शिक्षा मार्गदर्शन
+            EducationServicesView()
+        case 3: // रोज़गार सहयोग
+            EmploymentServicesView()
         case 4: // सरकारी योजनाएं
             GovernmentSchemesView()
+        case 5: // कृषि सहायता
+            AgricultureServicesView()
         default:
             // For other services, show a placeholder view
             VStack {

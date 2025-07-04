@@ -18,11 +18,11 @@ struct ActiveRequestsSection: View {
                 
                 Spacer()
                 
-                Button("सभी देखें") {
-                    // Handle view all action
+                NavigationLink(destination: ActiveRequestsView()) {
+                    Text("सभी देखें")
+                        .font(.system(size: 14))
+                        .foregroundColor(Color(red: 0.098, green: 0.463, blue: 0.824))
                 }
-                .font(.system(size: 14))
-                .foregroundColor(Color(red: 0.098, green: 0.463, blue: 0.824))
             }
             
             VStack(spacing: 8) {

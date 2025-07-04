@@ -23,7 +23,7 @@ struct GovernmentSchemesView: View {
                 
                 VStack(spacing: 0) {
                     // Custom Header
-                    GovernmentSchemeHeaderView(presentationMode: presentationMode)
+                    GovernmentSchemesHeaderView(presentationMode: presentationMode)
                     
                     // Content
                     ScrollView {
