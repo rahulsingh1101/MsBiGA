@@ -25,7 +25,7 @@ struct ActiveRequestsView: View {
                 
                 // Content
                 ScrollView {
-                    VStack(spacing: 0) {
+                    LazyVStack(spacing: 0) {
                         // Filter Section
                         RequestFilterSection(selectedFilter: $selectedFilter, filters: filters)
                         

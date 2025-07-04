@@ -22,7 +22,7 @@ struct LegalServicesView: View {
                 
                 // Content
                 ScrollView {
-                    VStack(spacing: 16) {
+                    LazyVStack(spacing: 16) {
                         // Free Legal Aid Banner
                         FreeLegalAidBanner()
                         
@@ -41,6 +41,7 @@ struct LegalServicesView: View {
                         // Bottom CTA
                         LegalBottomCTA()
                     }
+                    .padding(.top, 16)
                     .padding(.bottom, 100)
                 }
             }

@@ -25,7 +25,7 @@ struct AgricultureServicesView: View {
                 
                 // Content
                 ScrollView {
-                    VStack(spacing: 16) {
+                    LazyVStack(spacing: 16) {
                         // Weather Widget
                         WeatherWidget()
                         
@@ -47,6 +47,7 @@ struct AgricultureServicesView: View {
                         // Help Numbers
                         HelpNumbers()
                     }
+                    .padding(.top, 16)
                     .padding(.bottom, 100)
                 }
             }

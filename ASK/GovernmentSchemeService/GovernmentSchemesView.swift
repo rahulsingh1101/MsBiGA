@@ -27,7 +27,7 @@ struct GovernmentSchemesView: View {
                     
                     // Content
                     ScrollView {
-                        VStack(spacing: 16) {
+                        LazyVStack(spacing: 16) {
                             // Search Section
                             SearchSection(searchText: $searchText)
                             
@@ -40,6 +40,7 @@ struct GovernmentSchemesView: View {
                             // Schemes Section
                             SchemesSection()
                         }
+                        .padding(.top, 16)
                         .padding(.bottom, 100) // Space for bottom buttons
                     }
                 }

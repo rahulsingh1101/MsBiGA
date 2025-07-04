@@ -26,7 +26,7 @@ struct EmploymentServicesView: View {
                 
                 // Content
                 ScrollView {
-                    VStack(spacing: 16) {
+                    LazyVStack(spacing: 16) {
                         // Job Search Bar
                         JobSearchBar(searchText: $searchText, selectedFilter: $selectedFilter, filters: filters)
                         
@@ -48,6 +48,7 @@ struct EmploymentServicesView: View {
                         // Skill Training
                         SkillTraining()
                     }
+                    .padding(.top, 16)
                     .padding(.bottom, 100)
                 }
             }

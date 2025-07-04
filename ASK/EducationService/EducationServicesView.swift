@@ -25,7 +25,7 @@ struct EducationServicesView: View {
                 
                 // Content
                 ScrollView {
-                    VStack(spacing: 16) {
+                    LazyVStack(spacing: 16) {
                         // Student Level Selector
                         StudentLevelSelector(selectedLevel: $selectedLevel, levels: levels)
                         
@@ -47,6 +47,7 @@ struct EducationServicesView: View {
                         // Bottom Help
                         EducationBottomHelp()
                     }
+                    .padding(.top, 16)
                     .padding(.bottom, 100)
                 }
             }

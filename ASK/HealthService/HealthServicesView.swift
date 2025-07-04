@@ -22,7 +22,7 @@ struct HealthServicesView: View {
                 
                 // Content
                 ScrollView {
-                    VStack(spacing: 16) {
+                    LazyVStack(spacing: 16) {
                         // Emergency Banner
                         EmergencyBanner()
                         
@@ -38,6 +38,7 @@ struct HealthServicesView: View {
                         // Help Section
                         HealthHelpSection()
                     }
+                    .padding(.top, 16)
                     .padding(.bottom, 100)
                 }
             }
